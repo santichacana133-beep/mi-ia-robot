@@ -1,0 +1,605 @@
+[
+  {
+    "id": 1,
+    "categoria": "medicina",
+    "tema": "Medicina",
+    "informacion": "La medicina es la ciencia dedicada a la prevención, diagnóstico y tratamiento de enfermedades."
+  },
+  {
+    "id": 2,
+    "categoria": "medicina",
+    "tema": "Salud",
+    "informacion": "La salud comprende el bienestar físico, mental y social de una persona."
+  },
+  {
+    "id": 3,
+    "categoria": "medicina",
+    "tema": "Enfermedad",
+    "informacion": "Una enfermedad es una alteración del funcionamiento normal del organismo."
+  },
+  {
+    "id": 4,
+    "categoria": "medicina",
+    "tema": "Diagnóstico",
+    "informacion": "El diagnóstico es el proceso mediante el cual un profesional identifica una enfermedad o condición."
+  },
+  {
+    "id": 5,
+    "categoria": "medicina",
+    "tema": "Síntoma",
+    "informacion": "Un síntoma es una manifestación que una persona experimenta y comunica."
+  },
+  {
+    "id": 6,
+    "categoria": "medicina",
+    "tema": "Signo clínico",
+    "informacion": "Un signo clínico es una manifestación observable o medible relacionada con una condición de salud."
+  },
+  {
+    "id": 7,
+    "categoria": "medicina",
+    "tema": "Presión arterial",
+    "informacion": "La presión arterial es la fuerza que ejerce la sangre contra las paredes de los vasos sanguíneos."
+  },
+  {
+    "id": 8,
+    "categoria": "medicina",
+    "tema": "Frecuencia cardíaca",
+    "informacion": "La frecuencia cardíaca indica cuántas veces late el corazón durante un periodo determinado."
+  },
+  {
+    "id": 9,
+    "categoria": "medicina",
+    "tema": "Temperatura corporal",
+    "informacion": "La temperatura corporal es una medida del estado térmico del organismo."
+  },
+  {
+    "id": 10,
+    "categoria": "medicina",
+    "tema": "Oxígeno",
+    "informacion": "El oxígeno es necesario para numerosos procesos metabólicos de las células."
+  },
+  {
+    "id": 11,
+    "categoria": "medicina",
+    "tema": "Sistema inmunitario",
+    "informacion": "El sistema inmunitario ayuda al organismo a reconocer y defenderse de agentes potencialmente dañinos."
+  },
+  {
+    "id": 12,
+    "categoria": "medicina",
+    "tema": "Vacuna",
+    "informacion": "Una vacuna prepara al sistema inmunitario para responder frente a determinados agentes infecciosos."
+  },
+  {
+    "id": 13,
+    "categoria": "medicina",
+    "tema": "Medicamento",
+    "informacion": "Un medicamento es una sustancia o preparación utilizada para prevenir, diagnosticar o tratar determinadas condiciones."
+  },
+  {
+    "id": 14,
+    "categoria": "medicina",
+    "tema": "Antibiótico",
+    "informacion": "Los antibióticos son medicamentos utilizados contra determinadas infecciones causadas por bacterias."
+  },
+  {
+    "id": 15,
+    "categoria": "medicina",
+    "tema": "Infección",
+    "informacion": "Una infección ocurre cuando un agente infeccioso invade y se multiplica en un organismo."
+  },
+  {
+    "id": 16,
+    "categoria": "medicina",
+    "tema": "Inflamación",
+    "informacion": "La inflamación es una respuesta del organismo frente a una lesión, infección u otros estímulos."
+  },
+  {
+    "id": 17,
+    "categoria": "medicina",
+    "tema": "Primeros auxilios",
+    "informacion": "Los primeros auxilios son medidas iniciales de atención proporcionadas ante una emergencia hasta recibir ayuda adecuada."
+  },
+  {
+    "id": 18,
+    "categoria": "medicina",
+    "tema": "Rehabilitación",
+    "informacion": "La rehabilitación busca ayudar a una persona a recuperar o mantener determinadas capacidades después de una enfermedad o lesión."
+  },
+  {
+    "id": 19,
+    "categoria": "medicina",
+    "tema": "Fisioterapia",
+    "informacion": "La fisioterapia utiliza métodos físicos y ejercicios para ayudar a recuperar movimiento y función."
+  },
+  {
+    "id": 20,
+    "categoria": "medicina",
+    "tema": "Cirugía",
+    "informacion": "La cirugía es una especialidad médica que utiliza procedimientos operatorios para tratar determinadas condiciones."
+  },
+  {
+    "id": 21,
+    "categoria": "medicina",
+    "tema": "Telemedicina",
+    "informacion": "La telemedicina permite proporcionar determinados servicios de salud mediante tecnologías de comunicación a distancia."
+  },
+  {
+    "id": 22,
+    "categoria": "medicina",
+    "tema": "Historia clínica",
+    "informacion": "La historia clínica contiene información relevante sobre la atención y antecedentes de salud de un paciente."
+  },
+  {
+    "id": 23,
+    "categoria": "medicina",
+    "tema": "Profesional de salud",
+    "informacion": "Los profesionales de salud están capacitados para prestar servicios relacionados con la atención sanitaria según su especialidad."
+  },
+  {
+    "id": 24,
+    "categoria": "medicina",
+    "tema": "Prevención",
+    "informacion": "La prevención comprende acciones destinadas a reducir el riesgo de enfermedades o complicaciones."
+  },
+  {
+    "id": 25,
+    "categoria": "medicina",
+    "tema": "Investigación médica",
+    "informacion": "La investigación médica estudia enfermedades, tratamientos, tecnologías y otros aspectos relacionados con la salud."
+  },
+
+  {
+    "id": 26,
+    "categoria": "anatomia",
+    "tema": "Anatomía",
+    "informacion": "La anatomía estudia la estructura y organización del cuerpo."
+  },
+  {
+    "id": 27,
+    "categoria": "anatomia",
+    "tema": "Célula",
+    "informacion": "La célula es la unidad estructural y funcional básica de los seres vivos."
+  },
+  {
+    "id": 28,
+    "categoria": "anatomia",
+    "tema": "Tejido",
+    "informacion": "Un tejido es un conjunto organizado de células que desempeñan funciones relacionadas."
+  },
+  {
+    "id": 29,
+    "categoria": "anatomia",
+    "tema": "Órgano",
+    "informacion": "Un órgano está formado por diferentes tejidos organizados para realizar funciones específicas."
+  },
+  {
+    "id": 30,
+    "categoria": "anatomia",
+    "tema": "Sistema nervioso",
+    "informacion": "El sistema nervioso coordina numerosas funciones del organismo mediante señales eléctricas y químicas."
+  },
+  {
+    "id": 31,
+    "categoria": "anatomia",
+    "tema": "Cerebro",
+    "informacion": "El cerebro participa en funciones como pensamiento, memoria, percepción y control de movimientos."
+  },
+  {
+    "id": 32,
+    "categoria": "anatomia",
+    "tema": "Médula espinal",
+    "informacion": "La médula espinal conecta estructuras del sistema nervioso central con diferentes regiones del cuerpo."
+  },
+  {
+    "id": 33,
+    "categoria": "anatomia",
+    "tema": "Corazón",
+    "informacion": "El corazón es un órgano muscular que impulsa la sangre mediante contracciones."
+  },
+  {
+    "id": 34,
+    "categoria": "anatomia",
+    "tema": "Pulmones",
+    "informacion": "Los pulmones son órganos del sistema respiratorio donde ocurre el intercambio de gases."
+  },
+  {
+    "id": 35,
+    "categoria": "anatomia",
+    "tema": "Hígado",
+    "informacion": "El hígado participa en procesos metabólicos, almacenamiento de sustancias y producción de determinadas proteínas."
+  },
+  {
+    "id": 36,
+    "categoria": "anatomia",
+    "tema": "Riñones",
+    "informacion": "Los riñones filtran la sangre y participan en la regulación de líquidos y electrolitos."
+  },
+  {
+    "id": 37,
+    "categoria": "anatomia",
+    "tema": "Estómago",
+    "informacion": "El estómago participa en la digestión y mezcla los alimentos con secreciones digestivas."
+  },
+  {
+    "id": 38,
+    "categoria": "anatomia",
+    "tema": "Intestino delgado",
+    "informacion": "El intestino delgado participa principalmente en la digestión y absorción de nutrientes."
+  },
+  {
+    "id": 39,
+    "categoria": "anatomia",
+    "tema": "Intestino grueso",
+    "informacion": "El intestino grueso participa en la absorción de agua y en la formación de las heces."
+  },
+  {
+    "id": 40,
+    "categoria": "anatomia",
+    "tema": "Hueso",
+    "informacion": "Los huesos proporcionan soporte, protección y participación en el movimiento del cuerpo."
+  },
+  {
+    "id": 41,
+    "categoria": "anatomia",
+    "tema": "Músculo",
+    "informacion": "Los músculos producen fuerza mediante contracciones y permiten diferentes movimientos."
+  },
+  {
+    "id": 42,
+    "categoria": "anatomia",
+    "tema": "Articulación",
+    "informacion": "Una articulación es la unión entre dos o más estructuras óseas o cartilaginosas."
+  },
+  {
+    "id": 43,
+    "categoria": "anatomia",
+    "tema": "Tendón",
+    "informacion": "Los tendones conectan músculos con huesos y transmiten fuerzas producidas por los músculos."
+  },
+  {
+    "id": 44,
+    "categoria": "anatomia",
+    "tema": "Ligamento",
+    "informacion": "Los ligamentos conectan huesos y ayudan a estabilizar las articulaciones."
+  },
+  {
+    "id": 45,
+    "categoria": "anatomia",
+    "tema": "Piel",
+    "informacion": "La piel es el órgano que cubre externamente el cuerpo y contribuye a la protección y regulación térmica."
+  },
+  {
+    "id": 46,
+    "categoria": "anatomia",
+    "tema": "Sangre",
+    "informacion": "La sangre transporta gases, nutrientes, hormonas y otros elementos por el organismo."
+  },
+  {
+    "id": 47,
+    "categoria": "anatomia",
+    "tema": "Vasos sanguíneos",
+    "informacion": "Los vasos sanguíneos transportan sangre entre el corazón y los tejidos."
+  },
+  {
+    "id": 48,
+    "categoria": "anatomia",
+    "tema": "Glóbulos rojos",
+    "informacion": "Los glóbulos rojos transportan principalmente oxígeno mediante la hemoglobina."
+  },
+  {
+    "id": 49,
+    "categoria": "anatomia",
+    "tema": "Glóbulos blancos",
+    "informacion": "Los glóbulos blancos participan en diferentes funciones de defensa del organismo."
+  },
+  {
+    "id": 50,
+    "categoria": "anatomia",
+    "tema": "Esqueleto",
+    "informacion": "El esqueleto humano está formado por huesos y estructuras relacionadas que proporcionan soporte y protección."
+  },
+
+  {
+    "id": 51,
+    "categoria": "robotica",
+    "tema": "Robótica",
+    "informacion": "La robótica combina disciplinas como mecánica, electrónica, programación y control para desarrollar sistemas robóticos."
+  },
+  {
+    "id": 52,
+    "categoria": "robotica",
+    "tema": "Robot",
+    "informacion": "Un robot es una máquina programable capaz de realizar determinadas tareas de manera automática o asistida."
+  },
+  {
+    "id": 53,
+    "categoria": "robotica",
+    "tema": "Sensor",
+    "informacion": "Un sensor detecta una magnitud física o condición y proporciona una señal que puede ser procesada."
+  },
+  {
+    "id": 54,
+    "categoria": "robotica",
+    "tema": "Actuador",
+    "informacion": "Un actuador convierte una señal de control en una acción física."
+  },
+  {
+    "id": 55,
+    "categoria": "robotica",
+    "tema": "Motor",
+    "informacion": "Un motor convierte energía en movimiento mecánico."
+  },
+  {
+    "id": 56,
+    "categoria": "robotica",
+    "tema": "Servomotor",
+    "informacion": "Un servomotor permite controlar la posición angular de un mecanismo mediante un sistema de control."
+  },
+  {
+    "id": 57,
+    "categoria": "robotica",
+    "tema": "Robot móvil",
+    "informacion": "Un robot móvil es un robot capaz de desplazarse mediante ruedas, orugas, patas u otros mecanismos."
+  },
+  {
+    "id": 58,
+    "categoria": "robotica",
+    "tema": "Robot humanoide",
+    "informacion": "Un robot humanoide está diseñado con una estructura que imita algunas características físicas del cuerpo humano."
+  },
+  {
+    "id": 59,
+    "categoria": "robotica",
+    "tema": "Robótica médica",
+    "informacion": "La robótica médica utiliza sistemas robóticos para apoyar determinadas actividades relacionadas con la atención sanitaria."
+  },
+  {
+    "id": 60,
+    "categoria": "robotica",
+    "tema": "Exoesqueleto",
+    "informacion": "Un exoesqueleto robótico es una estructura externa que puede proporcionar asistencia mecánica al movimiento."
+  },
+  {
+    "id": 61,
+    "categoria": "robotica",
+    "tema": "Prótesis robótica",
+    "informacion": "Una prótesis robótica puede utilizar sensores y actuadores para proporcionar determinadas funciones de una extremidad artificial."
+  },
+  {
+    "id": 62,
+    "categoria": "robotica",
+    "tema": "Controlador",
+    "informacion": "Un controlador procesa información y genera señales para controlar un sistema."
+  },
+  {
+    "id": 63,
+    "categoria": "robotica",
+    "tema": "Microcontrolador",
+    "informacion": "Un microcontrolador es un circuito integrado programable utilizado para controlar dispositivos electrónicos."
+  },
+  {
+    "id": 64,
+    "categoria": "robotica",
+    "tema": "ESP32",
+    "informacion": "El ESP32 es una familia de microcontroladores con capacidades de procesamiento y conectividad inalámbrica."
+  },
+  {
+    "id": 65,
+    "categoria": "robotica",
+    "tema": "Visión artificial",
+    "informacion": "La visión artificial permite a un sistema procesar información obtenida mediante cámaras u otros sensores ópticos."
+  },
+  {
+    "id": 66,
+    "categoria": "robotica",
+    "tema": "Inteligencia artificial",
+    "informacion": "La inteligencia artificial comprende técnicas que permiten a los sistemas realizar tareas asociadas con capacidades cognitivas."
+  },
+  {
+    "id": 67,
+    "categoria": "robotica",
+    "tema": "Navegación autónoma",
+    "informacion": "La navegación autónoma permite que un robot determine y ejecute movimientos sin control humano continuo."
+  },
+  {
+    "id": 68,
+    "categoria": "robotica",
+    "tema": "Detección de obstáculos",
+    "informacion": "La detección de obstáculos utiliza sensores para identificar objetos que pueden interferir con el movimiento de un robot."
+  },
+  {
+    "id": 69,
+    "categoria": "robotica",
+    "tema": "Equilibrio",
+    "informacion": "El control del equilibrio permite mantener la estabilidad de un robot durante determinadas condiciones de movimiento."
+  },
+  {
+    "id": 70,
+    "categoria": "robotica",
+    "tema": "Brazo robótico",
+    "informacion": "Un brazo robótico está formado por articulaciones y segmentos que permiten realizar movimientos controlados."
+  },
+  {
+    "id": 71,
+    "categoria": "robotica",
+    "tema": "Pinza robótica",
+    "informacion": "Una pinza robótica es un mecanismo utilizado para sujetar o manipular objetos."
+  },
+  {
+    "id": 72,
+    "categoria": "robotica",
+    "tema": "Sensor de fuerza",
+    "informacion": "Un sensor de fuerza permite detectar o medir fuerzas aplicadas sobre una estructura."
+  },
+  {
+    "id": 73,
+    "categoria": "robotica",
+    "tema": "Sensor de temperatura",
+    "informacion": "Un sensor de temperatura convierte cambios térmicos en una señal que puede ser interpretada por un sistema."
+  },
+  {
+    "id": 74,
+    "categoria": "robotica",
+    "tema": "Sensor táctil",
+    "informacion": "Un sensor táctil permite detectar contacto o presión sobre una superficie."
+  },
+  {
+    "id": 75,
+    "categoria": "robotica",
+    "tema": "Piel artificial",
+    "informacion": "La piel artificial es un material o sistema diseñado para imitar algunas propiedades de la piel, como flexibilidad o sensibilidad."
+  },
+
+  {
+    "id": 76,
+    "categoria": "electronica",
+    "tema": "Electrónica",
+    "informacion": "La electrónica estudia y utiliza circuitos para controlar señales eléctricas y procesar información."
+  },
+  {
+    "id": 77,
+    "categoria": "electronica",
+    "tema": "Voltaje",
+    "informacion": "El voltaje es una diferencia de potencial eléctrico entre dos puntos."
+  },
+  {
+    "id": 78,
+    "categoria": "electronica",
+    "tema": "Corriente",
+    "informacion": "La corriente eléctrica es el movimiento de carga eléctrica a través de un material."
+  },
+  {
+    "id": 79,
+    "categoria": "electronica",
+    "tema": "Resistencia",
+    "informacion": "La resistencia eléctrica se opone al paso de la corriente eléctrica."
+  },
+  {
+    "id": 80,
+    "categoria": "electronica",
+    "tema": "Ley de Ohm",
+    "informacion": "La ley de Ohm relaciona voltaje, corriente y resistencia mediante la expresión V = I × R."
+  },
+  {
+    "id": 81,
+    "categoria": "electronica",
+    "tema": "Resistor",
+    "informacion": "Un resistor es un componente utilizado para ofrecer una resistencia determinada al paso de corriente."
+  },
+  {
+    "id": 82,
+    "categoria": "electronica",
+    "tema": "Capacitor",
+    "informacion": "Un capacitor almacena energía eléctrica en un campo eléctrico."
+  },
+  {
+    "id": 83,
+    "categoria": "electronica",
+    "tema": "Diodo",
+    "informacion": "Un diodo es un componente semiconductor que permite el paso de corriente principalmente en una dirección."
+  },
+  {
+    "id": 84,
+    "categoria": "electronica",
+    "tema": "LED",
+    "informacion": "Un LED es un diodo semiconductor que emite luz cuando circula corriente en condiciones adecuadas."
+  },
+  {
+    "id": 85,
+    "categoria": "electronica",
+    "tema": "Transistor",
+    "informacion": "Un transistor es un semiconductor utilizado para amplificar señales o actuar como interruptor electrónico."
+  },
+  {
+    "id": 86,
+    "categoria": "electronica",
+    "tema": "Relé",
+    "informacion": "Un relé es un dispositivo que permite controlar un circuito eléctrico mediante una señal de control."
+  },
+  {
+    "id": 87,
+    "categoria": "electronica",
+    "tema": "Fuente de alimentación",
+    "informacion": "Una fuente de alimentación proporciona energía eléctrica con características adecuadas para un circuito."
+  },
+  {
+    "id": 88,
+    "categoria": "electronica",
+    "tema": "Batería",
+    "informacion": "Una batería almacena energía química y puede convertirla en energía eléctrica."
+  },
+  {
+    "id": 89,
+    "categoria": "electronica",
+    "tema": "Circuito",
+    "informacion": "Un circuito eléctrico es un conjunto de componentes conectados que permiten el funcionamiento de una ruta eléctrica."
+  },
+  {
+    "id": 90,
+    "categoria": "electronica",
+    "tema": "Microcontrolador",
+    "informacion": "Un microcontrolador integra procesador, memoria y periféricos para ejecutar programas y controlar sistemas."
+  },
+  {
+    "id": 91,
+    "categoria": "electronica",
+    "tema": "Entrada digital",
+    "informacion": "Una entrada digital permite a un sistema interpretar estados discretos, normalmente representados como niveles lógicos."
+  },
+  {
+    "id": 92,
+    "categoria": "electronica",
+    "tema": "Salida digital",
+    "informacion": "Una salida digital permite que un controlador genere un estado lógico para controlar otro dispositivo."
+  },
+  {
+    "id": 93,
+    "categoria": "electronica",
+    "tema": "Señal analógica",
+    "informacion": "Una señal analógica puede variar continuamente dentro de un determinado rango."
+  },
+  {
+    "id": 94,
+    "categoria": "electronica",
+    "tema": "Señal digital",
+    "informacion": "Una señal digital utiliza niveles discretos para representar información."
+  },
+  {
+    "id": 95,
+    "categoria": "electronica",
+    "tema": "Sensor de humedad",
+    "informacion": "Un sensor de humedad mide o detecta el nivel de humedad de un entorno o material."
+  },
+  {
+    "id": 96,
+    "categoria": "electronica",
+    "tema": "Sensor de movimiento",
+    "informacion": "Un sensor de movimiento detecta cambios relacionados con el movimiento de personas u objetos."
+  },
+  {
+    "id": 97,
+    "categoria": "electronica",
+    "tema": "Multímetro",
+    "informacion": "Un multímetro es un instrumento utilizado para medir magnitudes eléctricas como voltaje, corriente y resistencia."
+  },
+  {
+    "id": 98,
+    "categoria": "electronica",
+    "tema": "Osciloscopio",
+    "informacion": "Un osciloscopio permite observar cómo varía una señal eléctrica en función del tiempo."
+  },
+  {
+    "id": 99,
+    "categoria": "electronica",
+    "tema": "Protoboard",
+    "informacion": "Una protoboard permite montar y probar circuitos electrónicos sin realizar soldaduras permanentes."
+  },
+  {
+    "id": 100,
+    "categoria": "electronica",
+    "tema": "Tierra eléctrica",
+    "informacion": "La conexión a tierra proporciona un punto de referencia eléctrico y, según el sistema, puede contribuir a la seguridad."
+  }
+]
