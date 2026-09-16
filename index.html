@@ -1,0 +1,982 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MI IA ROBOT</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:#070914;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* FONDO */
+body::before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:rgba(0,180,255,.12);
+    filter:blur(120px);
+    top:-150px;
+    left:-150px;
+    z-index:-1;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:rgba(170,0,255,.10);
+    filter:blur(120px);
+    bottom:-180px;
+    right:-150px;
+    z-index:-1;
+}
+
+/* CONTENEDOR */
+.app{
+    width:95%;
+    max-width:1200px;
+    margin:25px auto;
+    display:grid;
+    grid-template-columns:280px 1fr;
+    gap:20px;
+}
+
+/* PANEL */
+.sidebar{
+    background:rgba(15,18,35,.82);
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:22px;
+    padding:20px;
+    backdrop-filter:blur(20px);
+    box-shadow:0 0 35px rgba(0,0,0,.35);
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.robot{
+    font-size:55px;
+    animation:flotar 3s ease-in-out infinite;
+}
+
+.logo h1{
+    font-size:22px;
+    margin-top:5px;
+}
+
+.logo p{
+    color:#8e9bbd;
+    font-size:12px;
+    margin-top:5px;
+}
+
+@keyframes flotar{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-8px)}
+}
+
+/* ESTADISTICAS */
+.stats{
+    display:grid;
+    gap:10px;
+    margin-top:20px;
+}
+
+.stat{
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.07);
+    padding:13px;
+    border-radius:14px;
+}
+
+.stat span{
+    display:block;
+    color:#8e9bbd;
+    font-size:11px;
+}
+
+.stat strong{
+    display:block;
+    margin-top:5px;
+    font-size:20px;
+}
+
+/* BOTONES */
+.menu{
+    margin-top:20px;
+    display:grid;
+    gap:10px;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+    color:white;
+    background:rgba(255,255,255,.07);
+    padding:12px;
+    border-radius:12px;
+    transition:.25s;
+}
+
+button:hover{
+    background:rgba(255,255,255,.14);
+    transform:translateY(-2px);
+}
+
+/* CHAT */
+.chat{
+    min-height:calc(100vh - 50px);
+    background:rgba(10,13,27,.78);
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:22px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    backdrop-filter:blur(20px);
+}
+
+/* CABECERA */
+.header{
+    padding:20px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header h2{
+    font-size:20px;
+}
+
+.status{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    color:#73ffb1;
+    font-size:12px;
+}
+
+.dot{
+    width:8px;
+    height:8px;
+    background:#45ff9a;
+    border-radius:50%;
+    box-shadow:0 0 12px #45ff9a;
+}
+
+/* MENSAJES */
+.messages{
+    flex:1;
+    padding:25px;
+    overflow-y:auto;
+    min-height:400px;
+    max-height:calc(100vh - 190px);
+}
+
+.message{
+    display:flex;
+    margin-bottom:18px;
+}
+
+.message.user{
+    justify-content:flex-end;
+}
+
+.bubble{
+    max-width:78%;
+    padding:14px 17px;
+    border-radius:17px;
+    line-height:1.5;
+    font-size:14px;
+    white-space:pre-wrap;
+}
+
+.ai .bubble{
+    background:rgba(255,255,255,.055);
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.user .bubble{
+    background:linear-gradient(135deg,#286cff,#713dff);
+}
+
+/* INPUT */
+.input-area{
+    padding:15px;
+    border-top:1px solid rgba(255,255,255,.08);
+    display:flex;
+    gap:10px;
+}
+
+#userInput{
+    flex:1;
+    border:none;
+    outline:none;
+    background:rgba(255,255,255,.06);
+    color:white;
+    padding:14px;
+    border-radius:14px;
+    font-size:14px;
+}
+
+#userInput::placeholder{
+    color:#78829d;
+}
+
+.send{
+    width:55px;
+    font-size:20px;
+    background:linear-gradient(135deg,#286cff,#713dff);
+}
+
+/* CATEGORIAS */
+.category{
+    display:inline-block;
+    padding:4px 8px;
+    border-radius:8px;
+    background:rgba(0,200,255,.12);
+    color:#69dfff;
+    font-size:10px;
+    margin-bottom:6px;
+}
+
+/* RESPONSIVE */
+@media(max-width:800px){
+
+    .app{
+        grid-template-columns:1fr;
+        width:96%;
+        margin:10px auto;
+    }
+
+    .sidebar{
+        display:none;
+    }
+
+    .chat{
+        min-height:calc(100vh - 20px);
+    }
+
+    .messages{
+        max-height:none;
+    }
+
+    .bubble{
+        max-width:88%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- PANEL LATERAL -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="robot">🤖</div>
+            <h1>MI IA ROBOT</h1>
+            <p>Sistema inteligente experimental</p>
+        </div>
+
+        <div class="stats">
+
+            <div class="stat">
+                <span>CONOCIMIENTOS</span>
+                <strong id="knowledgeCount">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>MEMORIAS</span>
+                <strong id="memoryCount">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>ESTADO</span>
+                <strong id="systemStatus">Cargando</strong>
+            </div>
+
+        </div>
+
+        <div class="menu">
+
+            <button onclick="mostrarMemoria()">
+                🧠 Ver memoria
+            </button>
+
+            <button onclick="limpiarMemoria()">
+                🗑️ Borrar memoria
+            </button>
+
+            <button onclick="mostrarConocimientos()">
+                📚 Ver conocimientos
+            </button>
+
+            <button onclick="nuevoChat()">
+                🔄 Nuevo chat
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- CHAT -->
+    <main class="chat">
+
+        <header class="header">
+
+            <div>
+                <h2>🤖 Asistente IA</h2>
+            </div>
+
+            <div class="status">
+                <div class="dot"></div>
+                <span id="statusText">Cargando conocimientos...</span>
+            </div>
+
+        </header>
+
+
+        <!-- MENSAJES -->
+        <section class="messages" id="messages">
+
+            <div class="message ai">
+
+                <div class="bubble">
+
+                    🤖 <strong>Hola.</strong>
+
+                    Soy la primera versión de tu IA.
+
+                    Ya puedo consultar mi base de conocimientos sobre:
+
+                    🩺 Medicina
+                    🧬 Anatomía
+                    🤖 Robótica
+                    ⚡ Electrónica
+
+                    Puedes preguntarme algo como:
+
+                    "¿Qué es el corazón?"
+
+                    "¿Qué es un sensor?"
+
+                    "¿Qué es un robot?"
+
+                    También puedes decir:
+
+                    <strong>recuerda que mi proyecto se llama...</strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INPUT -->
+        <div class="input-area">
+
+            <input
+                type="text"
+                id="userInput"
+                placeholder="Escribe una pregunta..."
+                autocomplete="off"
+            >
+
+            <button class="send" onclick="enviarMensaje()">
+                ➤
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script>
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+let conocimientos = [];
+
+let memoria = JSON.parse(
+    localStorage.getItem("ia_memoria") || "[]"
+);
+
+
+/* =====================================================
+   CARGAR JSON
+===================================================== */
+
+async function cargarConocimientos(){
+
+    try{
+
+        const respuesta = await fetch("conocimientos.json");
+
+        if(!respuesta.ok){
+            throw new Error("No se encontró conocimientos.json");
+        }
+
+        conocimientos = await respuesta.json();
+
+        document.getElementById("knowledgeCount").textContent =
+            conocimientos.length;
+
+        document.getElementById("systemStatus").textContent =
+            "Activo";
+
+        document.getElementById("statusText").textContent =
+            "Sistema conectado";
+
+        actualizarMemoria();
+
+        console.log(
+            "Conocimientos cargados:",
+            conocimientos.length
+        );
+
+    }catch(error){
+
+        console.error(error);
+
+        document.getElementById("systemStatus").textContent =
+            "Error";
+
+        document.getElementById("statusText").textContent =
+            "Error al cargar JSON";
+
+        agregarMensaje(
+            "ai",
+            "⚠️ No pude cargar conocimientos.json.\n\n" +
+            "Comprueba que esté en la misma carpeta que index.html."
+        );
+    }
+}
+
+
+/* =====================================================
+   NORMALIZAR TEXTO
+===================================================== */
+
+function normalizar(texto){
+
+    return texto
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g,"")
+        .trim();
+}
+
+
+/* =====================================================
+   ENVIAR MENSAJE
+===================================================== */
+
+function enviarMensaje(){
+
+    const input =
+        document.getElementById("userInput");
+
+    const pregunta =
+        input.value.trim();
+
+    if(!pregunta) return;
+
+    agregarMensaje("user",pregunta);
+
+    input.value="";
+
+    setTimeout(() => {
+
+        procesarPregunta(pregunta);
+
+    },300);
+}
+
+
+/* =====================================================
+   ENTER
+===================================================== */
+
+document.getElementById("userInput")
+.addEventListener("keydown",function(event){
+
+    if(event.key === "Enter"){
+
+        enviarMensaje();
+
+    }
+
+});
+
+
+/* =====================================================
+   PROCESAR PREGUNTA
+===================================================== */
+
+function procesarPregunta(pregunta){
+
+    const texto = normalizar(pregunta);
+
+
+    /* -----------------------------
+       GUARDAR MEMORIA
+    ----------------------------- */
+
+    if(
+        texto.startsWith("recuerda ") ||
+        texto.startsWith("recuerda que ") ||
+        texto.startsWith("memoriza ")
+    ){
+
+        guardarMemoria(pregunta);
+
+        return;
+    }
+
+
+    /* -----------------------------
+       VER MEMORIA
+    ----------------------------- */
+
+    if(
+        texto.includes("que recuerdas") ||
+        texto.includes("mis recuerdos") ||
+        texto.includes("tu memoria")
+    ){
+
+        mostrarMemoria();
+
+        return;
+    }
+
+
+    /* -----------------------------
+       SALUDOS
+    ----------------------------- */
+
+    if(
+        texto === "hola" ||
+        texto === "hola ia" ||
+        texto === "buenas" ||
+        texto === "hey"
+    ){
+
+        agregarMensaje(
+            "ai",
+            "🤖 Hola. Estoy lista para ayudarte. ¿Qué quieres aprender?"
+        );
+
+        return;
+    }
+
+
+    /* -----------------------------
+       BUSCAR CONOCIMIENTO
+    ----------------------------- */
+
+    if(conocimientos.length === 0){
+
+        agregarMensaje(
+            "ai",
+            "⚠️ Mi base de conocimientos todavía no está cargada."
+        );
+
+        return;
+    }
+
+
+    const resultados =
+        buscarConocimiento(texto);
+
+
+    if(resultados.length > 0){
+
+        let respuesta =
+            "📚 Encontré información relacionada:\n\n";
+
+        resultados.slice(0,3).forEach((item,index)=>{
+
+            respuesta +=
+                "▸ " +
+                item.tema +
+                "\n\n";
+
+            respuesta +=
+                item.informacion +
+                "\n\n";
+
+        });
+
+        agregarMensaje("ai",respuesta);
+
+    }else{
+
+        agregarMensaje(
+            "ai",
+            "🤖 Todavía no tengo información suficiente sobre eso.\n\n" +
+            "Puedes agregar ese conocimiento posteriormente a conocimientos.json."
+        );
+    }
+
+}
+
+
+/* =====================================================
+   BUSCADOR
+===================================================== */
+
+function buscarConocimiento(pregunta){
+
+    const palabras =
+        normalizar(pregunta)
+        .split(/\s+/)
+        .filter(p => p.length > 2);
+
+
+    let resultados = [];
+
+
+    conocimientos.forEach(item => {
+
+        const texto =
+            normalizar(
+                item.categoria + " " +
+                item.tema + " " +
+                item.informacion
+            );
+
+        let puntos = 0;
+
+
+        palabras.forEach(palabra => {
+
+            if(texto.includes(palabra)){
+
+                puntos++;
+
+            }
+
+        });
+
+
+        if(puntos > 0){
+
+            resultados.push({
+
+                ...item,
+
+                puntos:puntos
+
+            });
+
+        }
+
+    });
+
+
+    resultados.sort(
+        (a,b)=>b.puntos-a.puntos
+    );
+
+
+    return resultados;
+
+}
+
+
+/* =====================================================
+   AGREGAR MENSAJE
+===================================================== */
+
+function agregarMensaje(tipo,texto){
+
+    const contenedor =
+        document.getElementById("messages");
+
+
+    const mensaje =
+        document.createElement("div");
+
+    mensaje.className =
+        "message " + tipo;
+
+
+    const burbuja =
+        document.createElement("div");
+
+    burbuja.className="bubble";
+
+    burbuja.textContent=texto;
+
+
+    mensaje.appendChild(burbuja);
+
+    contenedor.appendChild(mensaje);
+
+
+    contenedor.scrollTop =
+        contenedor.scrollHeight;
+}
+
+
+/* =====================================================
+   MEMORIA
+===================================================== */
+
+function guardarMemoria(texto){
+
+    let recuerdo =
+        texto
+        .replace(/^recuerda que /i,"")
+        .replace(/^recuerda /i,"")
+        .replace(/^memoriza /i,"")
+        .trim();
+
+
+    if(!recuerdo){
+
+        agregarMensaje(
+            "ai",
+            "🤔 No encontré nada para guardar."
+        );
+
+        return;
+    }
+
+
+    memoria.push({
+
+        texto:recuerdo,
+
+        fecha:new Date().toLocaleString()
+
+    });
+
+
+    localStorage.setItem(
+        "ia_memoria",
+        JSON.stringify(memoria)
+    );
+
+
+    actualizarMemoria();
+
+
+    agregarMensaje(
+        "ai",
+        "🧠 Guardado en mi memoria:\n\n" +
+        recuerdo
+    );
+
+}
+
+
+/* =====================================================
+   ACTUALIZAR CONTADOR
+===================================================== */
+
+function actualizarMemoria(){
+
+    document.getElementById("memoryCount")
+    .textContent = memoria.length;
+
+}
+
+
+/* =====================================================
+   MOSTRAR MEMORIA
+===================================================== */
+
+function mostrarMemoria(){
+
+    if(memoria.length===0){
+
+        agregarMensaje(
+            "ai",
+            "🧠 Mi memoria está vacía."
+        );
+
+        return;
+    }
+
+
+    let texto =
+        "🧠 COSAS QUE RECUERDO:\n\n";
+
+
+    memoria.forEach((item,index)=>{
+
+        texto +=
+            (index+1) +
+            ". " +
+            item.texto +
+            "\n";
+
+    });
+
+
+    agregarMensaje(
+        "ai",
+        texto
+    );
+
+}
+
+
+/* =====================================================
+   BORRAR MEMORIA
+===================================================== */
+
+function limpiarMemoria(){
+
+    if(memoria.length===0){
+
+        agregarMensaje(
+            "ai",
+            "🧠 No tengo recuerdos guardados."
+        );
+
+        return;
+    }
+
+
+    const confirmar =
+        confirm(
+            "¿Seguro que quieres borrar toda la memoria?"
+        );
+
+
+    if(!confirmar) return;
+
+
+    memoria=[];
+
+    localStorage.removeItem("ia_memoria");
+
+    actualizarMemoria();
+
+
+    agregarMensaje(
+        "ai",
+        "🗑️ Memoria eliminada correctamente."
+    );
+
+}
+
+
+/* =====================================================
+   MOSTRAR CONOCIMIENTOS
+===================================================== */
+
+function mostrarConocimientos(){
+
+    if(conocimientos.length===0){
+
+        agregarMensaje(
+            "ai",
+            "📚 No hay conocimientos cargados."
+        );
+
+        return;
+    }
+
+
+    let texto =
+        "📚 BASE DE CONOCIMIENTOS\n\n" +
+        "Tengo " +
+        conocimientos.length +
+        " conocimientos cargados.\n\n";
+
+
+    conocimientos
+    .slice(0,20)
+    .forEach((item,index)=>{
+
+        texto +=
+            (index+1) +
+            ". [" +
+            item.categoria +
+            "] " +
+            item.tema +
+            "\n";
+
+    });
+
+
+    if(conocimientos.length>20){
+
+        texto +=
+            "\n...y " +
+            (conocimientos.length-20) +
+            " conocimientos más.";
+
+    }
+
+
+    agregarMensaje(
+        "ai",
+        texto
+    );
+
+}
+
+
+/* =====================================================
+   NUEVO CHAT
+===================================================== */
+
+function nuevoChat(){
+
+    const mensajes =
+        document.getElementById("messages");
+
+
+    mensajes.innerHTML="";
+
+
+    agregarMensaje(
+        "ai",
+        "🤖 Nuevo chat iniciado.\n\n" +
+        "¿Qué quieres aprender?"
+    );
+
+}
+
+
+/* =====================================================
+   INICIAR SISTEMA
+===================================================== */
+
+cargarConocimientos();
+
+</script>
+
+</body>
+</html>
+```
